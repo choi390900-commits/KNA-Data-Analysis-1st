@@ -76,3 +76,26 @@ print(num,type(num)) # 123 <class 'int'>
 # type()을 사용해서 출력된 자료형을 쉽게 확인 할 수 있는 방법
 print("num >>>", type(num)) # num >>> <class 'int'>
 print("num :", type(num)) # num : <class ''>
+
+#=- =====================
+print("====== 자료형마다 동작이 다른 것 확인히기====")
+
+print(3 + 5) # 8
+print("3 + 5") # 35
+print("안녕하 + 세요") # 
+
+# =====================
+print("===== 자주 하는 실수 ========")
+print(0.1 + 0.8)
+# 위 상황에서는 출력되지만
+# 가끔 컴퓨터 내부 연산 과정에서
+
+# 작은 오차 해결법
+# round() 사용해서 반올림
+print(round(0.1 + 0.8, 2)) # 소수 둘째 자리를 반올림해서 0.9 출력
+
+# str과 int/float은 덧셈 불가
+# print('123' + 456) # TypeError 발생
+
+print(10 / 2) # 5.0 (나눗셈)
+print(type(10 / 2)) # <class 'float'>
