@@ -22,7 +22,3 @@ print("=======NameError 만들기=======")
 #print(NameError 만들기) # SyntaxError 발생
 # 코드는 위에서 아래로 실행되기 때문에 위에서 에러 발생하면 그 이후 코드 실행 X
 print("NameError 만들기") #따옴표로 감싸주면 에러 발생 X
-
-
-
-ddddsdsds
