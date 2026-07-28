@@ -239,15 +239,15 @@ print("=== count() ===")
 
 # 문자열에서 특정 문자열의 갯수 세기
 
-str = "a, b, c, d, e, a, a"
+# str = "a, b, c, d, e, a, a"
 
 # a의 갯수 세기
-print(str.count("a")) # 3
+# print(str.count("a")) # 3
 
 # ,의 갯수 세기
-print(str.count(",")) # 6
+# print(str.count(",")) # 6
 
-print(str.count(", ")) # 
+# print(str.count(", ")) # 
 
 # ================pr==============
 print(" === startswith() ===")
@@ -324,7 +324,7 @@ print(str3) # abcdef > 기존 str3의 값인 소분자를 그대로 출력
 # 앞으로 게속 대문자로 변환한 값으 사용하고 싶다면
 # 변수에 재할당
 # 변수 재할당에서 변수 스스로 값을 부르려면 무조건 "재할당"이여야 함
-str3 = str.upper()
+# str3 = str.upper()
 
 # 최초 변수 할당 세에는 저장된 값이 없어서
 # 변수 스스로 값을 불러와 할당 불가능
@@ -371,7 +371,7 @@ print("=== strip ===")
 # 공백 제거
 # .strip(): 앞과 뒤에 모든 공백 제거 (중간에 띄어쓰기는 그대로 유지)
 # .lstrip(): left(왼쪽) 공백만 제거
-# .rstrip(): reft(오른쪽) 공백만 제거
+# .rstrip(): right(오른쪽) 공백만 제거
 raw = "   정상     "
 print(raw.strip())
 print(raw.lstrip())
@@ -560,6 +560,43 @@ c = s[1].strip().lower()
 print(c)
 
 # ====================================
+
 name = "PUMP_A"
 temp = 87
 print(f"설비{name}, 온도{temp}도")
+# 출력 값: 설비 PUMP_A, 온도87도
+
+# print("설비 " + name + ", 온도 " + str(temp) + "도")
+# ====================================
+print("=== f-string() ===")
+# f-string - 문자열 안에 변수값을 바로 넣을 수 있는 기능
+
+hour = 8
+
+# 우리는 하루에 8시간 수업을 듣고, 이는 480분 입니다
+print(f"우리는 하루에 {hour}시간 수업을 듣고, 이는 {hour * 60}분 입니다")
+
+# ============================================
+a = 100
+b = 80
+c = 75
+print(f"평균 {(a+ b+ c) / 3}")
+
+rt = 87.456
+print(f"측정값 {rt}")
+print(f"측정값 {rt:.1f}")
+print(f"측정값 {rt:.2f}")
+
+# =====================================
+
+ra = " 5 , sensor_2 , WARNING , 0.78912"
+pa = ra.strip().split(",")
+si = pa[1].strip()
+st = pa[2].strip().lower()
+rr = float(pa[3].strip())
+print(f"[센서: {si}], 상태: {st}, 측정값: {rr:.2f}")
+
+# =====================================
+
+print("=== 리스트 ===")
+
