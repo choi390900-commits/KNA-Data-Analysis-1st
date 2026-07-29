@@ -71,3 +71,32 @@ print((x + y + z) / 3)
 side = 6
 print(side ** 2)
 print(3 * 4 * 5) 
+
+user_input = int(input("사용자 입력값: "))
+
+result = []
+
+# 2. for문을 사용하여 1부터 입력받은 값까지 반복합니다.
+for i in range(1, user_input + 1):
+    # 3. if문과 나머지 연산자(%)를 사용하여 3의 배수인지 확인합니다.
+    if i % 3 == 0:
+        # 3의 배수인 경우, 문자열로 변환하여 리스트에 추가합니다.
+        result.append(str(i))
+
+# 4. 쉼표(,)로 리스트의 요소들을 연결하여 출력합니다.
+print(f"출력값: {', '.join(result)}")
+
+
+# ============================================================
+user_input = int(input("사용자 입력값: "))
+
+print("출력값: ", end="")
+
+# 1부터 입력값까지 반복
+for i in range(1, user_input + 1):
+    # 3의 배수인지 확인
+    if i % 3 == 0:
+        if i == 3:
+            print(i, end="")         # 첫 번째 3의 배수는 쉼표 없이 출력
+        else:
+            print(f", {i}", end="")
