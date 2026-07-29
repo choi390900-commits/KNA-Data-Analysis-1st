@@ -47,3 +47,22 @@ for i in range(n, 0, -1):
   print(i)
 
 # =========================================================
+lim = int(input("사용자 입력값: "))
+
+for i in range(1, lim + 1):
+  if i % 3 == 0:
+    if i == 3:
+     print(1, end=" ")
+    else:
+      print(f", {i}", end="")
+      
+# ===========================================================
+
+dan = int(input("구구단 2의 배수 단만: "))
+for dan in range(1, 10):
+  # dan이 2의 배수인 경우에만 출력
+  if dan % 2 == 0:
+    print(f"=== {dan}단 ===")
+    for i in range(1, 10):
+      print(f"{dan} * {i} = {dan * i}")
+    print()
