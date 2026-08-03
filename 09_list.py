@@ -19,14 +19,52 @@ print(temps[-1]) # 가장 마지막 요소 출력 된다
 empty = [] # 아무 값도 없는 리스트
 
 # 리스트에 담긴 값의 갯수 세기
-#len() 내장함수 사용
+# len() 내장함수
 print(len(temps)) # 4
 print(len(empty)) # 0
+
 
 # 리스트에 담긴 값의 갯수 변수에 저장
 temps_length = len(temps) # 변수에 4라는 값이 할당
 print(temps_length) # 4
 
+# ===================================================
+# 리스트의 인덱스
+print(temps[0], temps[-1]) # 가장 첫 번째 요소, 가장 마지맏 요소
+# -1을 사용하는 이유는 최신 값은 대체로 뒤에 추각 됨
+# 가장 최신 값은 결국 마지막 인덱스의 요소
+# len 함수를 사용해서 리스트 길이 -1 로 게산이 가능하지만
+# 이 작업이 번거로워 -1을 가장 많이 사용
+
+# 없는 인덱스 호출
+# temps 리스트는 길이가 5
+# print(temps[5]) # indexError: list index out of range
+# 인덱스 법위를 벗어나지 않도록 유의
+
+# 리스트의 자료형
+print("=== 리스트의 자료형 ===")
+
+# temps라는 리스트 자체
+print(f"temps[0]: {temps}") # [35, 36, 37, 38]
+print(f"type(temps): {type(temps)}") # <class 'list'>
+
+# temps라는 리스트의 0번째 인덱스 요소
+print(f"temps[0]: {temps[0]}") # 35
+print(f"type(temps[0]): {type(temps[0])}") # <class 'int'>
+
+# 다른 자료형의 값이 들어있는 리스트의 요소 타입
+# float 값 들어있는 float_temps 리스트의 0번째 요소
+print(type(float_temps[0]))
+print(type(machines[0])) # <class 'srt'>
+
+# 퀴즈
+# mixed = ["펌프", 78, True]
+
+print(type(mixed[1])) # <class 'int>
+print(type(mixed[-1])) # <class 'bool'>
+print(type(mixed))  # <class 'list'>
+
+# 다른
 # ==============================================
 
 li = [32, 33, 34, 35, 36]
