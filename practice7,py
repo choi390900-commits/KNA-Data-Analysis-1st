@@ -21,3 +21,67 @@ print(df.head(10))
 
 print("\n[뒷부분 데이터 7줄 미리보기]")
 print(df.tail(7))  
+
+# =================================================================================
+# 실습2번
+
+import pandas as pd
+
+df = pd.read_csv("data/12_metro_compressor.csv")
+
+print("=== 1. head(1) 출력 (맨 위 1줄) ===")
+print(df.head(1))
+print("\n")
+
+print("=== 2. head(10) 출력 (맨 위 10줄) ===")
+print(df.head(10))
+print("\n")
+
+print("=== 3. tail(7) 출력 (맨 아래 7줄) ===")
+print(df.tail(7))
+print("\n")
+
+print("=== 4. head(500) 출력 (데이터보다 큰 숫자 입력) ===")
+print(df.head(500))
+
+# =================================================================================
+# 실습3번
+# shape . columns . dtypes로 데이터 뼈대 읽기
+
+# 12_metro_digital.csv 읽어와서 DataFrame에 담기
+# .shape 출력
+# .colims 출력 df.columns.tolist() 도 출력
+# .dtypes 출력
+
+import pandas as pd
+
+df = pd.read_csv("data/12_metro_digital.csv")
+
+print("=== 1. 데이터 크기 (shape) ===")
+print("결과:", df.shape)
+print("-" * 50)
+
+print("\n=== 2. 열 이름 (columns) ===")
+print("기본 출력:")
+print(df.columns)
+
+print("\n리스트 형태로 출력 (tolist):")
+print(df.columns.tolist())
+print("-" * 50)
+
+print("\n=== 3. 자료형 (dtypes) ===")
+print(df.dtypes)
+
+# ==============================================================================
+# 실습4번
+
+import pandas as pd
+
+df = pd.read_csv("data/12_metro_digital.csv")
+
+print("=== 설비 센서 데이터 자료형 점검 ===")
+print(df.dtypes)
+
+# =========================================================
+# 실습5번 
+# 12_metro_digital.csv 파일을 읽어서
