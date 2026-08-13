@@ -1,0 +1,117 @@
+# 실습1번 head.tall로 디지털 신호 살펴보기
+# import pandas as pd
+
+# 다은 코드로부터 시작해주세요
+# df = pd.read_csv("data/12_metro_digital.csv")
+
+# 위 코드가 정상 실행되어 shape가 나오는지 부터 확인하시고
+# 적절한 숫자들릐 줄을 정해서 .head()와 .tall()을 출력하세요
+
+# head와 tall 출력에서 NaN 위치가 보이는지도 확인해봅시다
+
+import pandas as pd
+
+df = pd.read_csv("data/12_metro_digital.csv")
+
+print("데이터 크기(행, 열):", df.shape)
+print("-" * 50)
+
+print("\n[앞부분 데이터 10줄 미리보기]")
+print(df.head(10)) 
+
+print("\n[뒷부분 데이터 7줄 미리보기]")
+print(df.tail(7))  
+
+# =================================================================================
+# 실습2번
+
+import pandas as pd
+
+df = pd.read_csv("data/12_metro_compressor.csv")
+
+print("=== 1. head(1) 출력 (맨 위 1줄) ===")
+print(df.head(1))
+print("\n")
+
+print("=== 2. head(10) 출력 (맨 위 10줄) ===")
+print(df.head(10))
+print("\n")
+
+print("=== 3. tail(7) 출력 (맨 아래 7줄) ===")
+print(df.tail(7))
+print("\n")
+
+print("=== 4. head(500) 출력 (데이터보다 큰 숫자 입력) ===")
+print(df.head(500))
+
+# =================================================================================
+# 실습3번
+# shape . columns . dtypes로 데이터 뼈대 읽기
+
+# 12_metro_digital.csv 읽어와서 DataFrame에 담기
+# .shape 출력
+# .colims 출력 df.columns.tolist() 도 출력
+# .dtypes 출력
+
+import pandas as pd
+
+df = pd.read_csv("data/12_metro_digital.csv")
+
+print("=== 1. 데이터 크기 (shape) ===")
+print("결과:", df.shape)
+print("-" * 50)
+
+print("\n=== 2. 열 이름 (columns) ===")
+print("기본 출력:")
+print(df.columns)
+
+print("\n리스트 형태로 출력 (tolist):")
+print(df.columns.tolist())
+print("-" * 50)
+
+print("\n=== 3. 자료형 (dtypes) ===")
+print(df.dtypes)
+
+# ==============================================================================
+# 실습4번
+
+import pandas as pd
+
+df = pd.read_csv("data/12_metro_digital.csv")
+
+print("=== 설비 센서 데이터 자료형 점검 ===")
+print(df.dtypes)
+
+# =========================================================
+# 실습5번 
+# 12_metro_digital.csv 파일을 읽어서
+
+
+# ================================================================================
+# 실습6번
+# 평균/분위기/최대를 읽어 이상 신호 있는 열 찾기
+
+import pandas as pd
+
+# 12_metro_compressor.csv
+# 온도, 진동에 이상값 존재
+
+df = pd.read_csv("data/12_metro_compressor.csv")
+print(df.shape)
+# print(df.head())
+# print(df.tall())
+
+df.info()
+
+# STEP1 : describe 후 75%와 max 자이 큰 열 찾기
+print(df.describe())
+
+# 온도의 평균과 최댓값 차이를 숫자 두개로
+# 75.000000 - 45.000000 = 
+
+# 2 75%와 max 차이가 큰 열을 두개 이상 찾기
+
+# 3 
+
+# ===================================================================
+# 실습7번
