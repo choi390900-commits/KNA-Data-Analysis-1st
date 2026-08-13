@@ -46,3 +46,24 @@ print("\n=== 여러 feature 열 ===")
 print("형태(shape):", multi_features.shape)
 
 # =====================================================================
+# 실습4번
+
+
+# =================================================================
+
+import pandas as pd
+
+df = pd.read_csv('data/13_diecasting_small.csv')
+
+loc_single = df.loc[0, '품질등급']
+print("품질등급 값:", loc_single)
+
+iloc_single = df.iloc[0]
+
+loc_range = df.loc[0:2]
+iloc_range = df.iloc[0:2]
+
+print("loc 범위 줄 수:", len(loc_range))
+print("iloc 범위 줄 수:", len(iloc_range))
+
+# ===================================================================
