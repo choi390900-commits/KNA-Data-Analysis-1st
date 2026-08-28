@@ -5,7 +5,7 @@ import numpy as np
 import matplotlib.pyplot as plt
 import seaborn as sns
 
-engine1 = pd.read_csv('20_engine01_timestamp_sample.csv')
+engine1 = pd.read_csv('21_cmapss_fd001_sample.csv')
 
 plt.figure(figsize=(12, 6))
 plt.subplot(2, 1, 1)
